@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Frew - Video Content</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Daily insights on business acquisitions, operations, and entrepreneurship from Michael Frew">
+</head>
+<body>
+    <div class="header">
+        <h1>Michael Frew - Video Content</h1>
+        <p>Daily insights on business acquisitions, operations, and entrepreneurship</p>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+        <!-- Videos will be populated here by JavaScript -->
+    </div>
+
+    <script>
+        // This will be populated by the build script
+        const videos = [
+            {
+                "slug": "2025-08-12-first-video",
+                "title": "My First Daily Video - Why I'm Starting This",
+                "date": "2025-08-12",
+                "description": "Explaining the new daily video strategy and what you can expect",
+                "youtube_url": "https://youtube.com/watch?v=EXAMPLE",
+                "duration": "8:32"
+            }
+        ];
+
+        function renderVideos() {
+            const grid = document.getElementById('videoGrid');
+            grid.innerHTML = videos.map(video => `
+                <div class="video-card">
+                    <div class="video-title">${video.title}</div>
+                    <div class="video-date">${video.date} • ${video.duration}</div>
+                    <div class="video-description">${video.description}</div>
+                    <div class="video-links">
+                        <a href="${video.youtube_url}" class="btn btn-primary" target="_blank">Watch on YouTube</a>
+                        <a href="videos/${video.slug}/" class="btn btn-secondary">Read Notes</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        renderVideos();
+    </script>
+</body>
+</html>
