@@ -1,0 +1,11 @@
+{
+  "name": "michaelfrew-videos",
+  "version": "1.0.0",
+  "description": "Video content with notes for Michael Frew",
+  "scripts": {
+    "build": "node scripts/generate-index.js",
+    "dev": "python3 -m http.server 8000"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
