@@ -1,6 +1,6 @@
 {
   "name": "michaelfrew-videos",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Video content with notes for Michael Frew",
   "scripts": {
     "build": "node scripts/generate-index.js",
