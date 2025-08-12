@@ -6,6 +6,8 @@
     "build": "node scripts/generate-index.js",
     "dev": "python3 -m http.server 8000"
   },
-  "dependencies": {},
+  "dependencies": {
+    "marked": "^9.1.2"
+  },
   "devDependencies": {}
 }
