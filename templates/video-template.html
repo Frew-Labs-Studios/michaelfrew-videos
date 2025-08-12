@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - Michael Frew</title>
+    <link rel="stylesheet" href="../../style.css">
+    <meta name="description" content="{{DESCRIPTION}}">
+</head>
+<body>
+    <div class="video-page">
+        <a href="../../" class="back-link">← Back to all videos</a>
+        
+        <h1>{{TITLE}}</h1>
+        <p class="video-date">{{DATE}} • {{DURATION}}</p>
+        
+        <div class="video-embed">
+            <iframe src="{{YOUTUBE_EMBED_URL}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div class="video-links">
+            <a href="{{YOUTUBE_URL}}" class="btn btn-primary" target="_blank">Watch on YouTube</a>
+        </div>
+        
+        <div class="video-notes">
+            <h2>Video Notes</h2>
+            {{NOTES_CONTENT}}
+        </div>
+    </div>
+</body>
+</html>
