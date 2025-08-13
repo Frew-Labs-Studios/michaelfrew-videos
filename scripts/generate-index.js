@@ -33,8 +33,12 @@ videos.forEach(video => {
         const notesContent = fs.readFileSync(notesPath, 'utf8');
         const htmlContent = marked(notesContent);
         
-        const youtubeEmbedUrl = video.youtube_url.replace('watch?v=', 'embed/');
-        
+    let youtubeEmbedUrl;
+    if (video.youtube_url.includes('youtu.be/')) {
+        youtubeEmbedUrl = video.youtube_url.replace('youtu.be/', 'www.youtube.com/embed/');
+    } else {
+        youtubeEmbedUrl = video.youtube_url.replace('watch?v=', 'embed/');
+    }        
         let pageHtml = template
             .replace(/{{TITLE}}/g, video.title)
             .replace(/{{DATE}}/g, video.date)
